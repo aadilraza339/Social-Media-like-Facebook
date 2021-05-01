@@ -58,3 +58,4 @@ block/{fId}
 ```javascript
 router.post('/:Action/:fId', checkAuth, friendControllers.Frirequest);
 ```
+ 
