@@ -52,7 +52,7 @@ router.get('/friendlist', checkAuth, friendControllers.friendlist);
 ```
 
  <br>
-#### this endpoint Below, you want to run, so then you have to tell **Action** and **friend_id** , what could be Action  <br>
+### this endpoint Below, you want to run, so then you have to tell **Action** and **friend_id** , what could be Action  <br>
 addfriend/{fId}  <br>
 reject/{fId} <br>
 block/{fId} 
