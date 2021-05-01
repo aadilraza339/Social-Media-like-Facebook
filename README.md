@@ -18,7 +18,7 @@ Design and develop REST APIs using node.js for a mini social media app which inc
 ## HOW TO **RUN** 🏃‍ PROJECT <br>
 ```
 git clone https://github.com/aadilraza339/Social-Media-like-Facebook.git
-`` `<br>
+```<br>
 ```cd Social-Media-like-Facebook
 ```<br>
 ``npm intall``<br>
