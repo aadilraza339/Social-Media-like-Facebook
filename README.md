@@ -49,14 +49,12 @@ router.delete('/deletePost/:post_id', checkAuth, userControllers.deletePost)
 router.put('/editprofile', checkAuth, userControllers.updateProfile)
 router.post('/sendReq/:fId', checkAuth, friendControllers.sendReq);
 router.get('/friendlist', checkAuth, friendControllers.friendlist);
-```
- <br>
- 
+```  
+<br>
 <h4> this endpoint Below, you want to run, so then you have to tell ***Action*** and ***friend_id*** , what could be Action</h4>  <br>
 addfriend/{fId}  <br>
 reject/{fId} <br>
 block/{fId} <br>
-
 ```javascript
    router.post('/:Action/:fId', checkAuth, friendControllers.Frirequest);
 ```
