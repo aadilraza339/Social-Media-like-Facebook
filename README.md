@@ -55,8 +55,8 @@ router.get('/friendlist', checkAuth, friendControllers.friendlist);
 <h4> this endpoint Below, you want to run, so then you have to tell ***Action*** and ***friend_id*** , what could be Action</h4>  <br>
 addfriend/{fId}  <br>
 reject/{fId} <br>
-block/{fId} 
-<br>
+block/{fId} <br>
+
 ```javascript
-router.post('/:Action/:fId', checkAuth, friendControllers.Frirequest);
+   router.post('/:Action/:fId', checkAuth, friendControllers.Frirequest);
 ```
