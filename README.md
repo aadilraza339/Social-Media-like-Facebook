@@ -55,6 +55,7 @@ router.get('/friendlist', checkAuth, friendControllers.friendlist);
 addfriend/{fId}  <br>
 reject/{fId} <br>
 block/{fId} <br>
+
 ```javascript
-   router.post('/:Action/:fId', checkAuth, friendControllers.Frirequest);
+ router.post('/:Action/:fId', checkAuth, friendControllers.Frirequest);
 ```
