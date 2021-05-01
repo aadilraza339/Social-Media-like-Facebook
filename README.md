@@ -20,15 +20,15 @@ Design and develop REST APIs using node.js for a mini social media app which inc
 ```cd Social-Media-like-Facebook```<br>
 ``npm intall``<br>
 <span>For caching I used redis, if you want to know about  </span><a href="https://livecodestream.dev/post/beginners-guide-to-redis-and-caching-with-nodejs/">click here</a><br>
-mkdir redis && cd redis<br>
-curl -O http://download.redis.io/redis-stable.tar.gz tar xzvf redis-stable.tar.gz <br>
-cd redis-stable<br>
-make<br>
-make test<br>
-redis-server<br>
+``mkdir redis && cd redis<br>``
+``curl -O http://download.redis.io/redis-stable.tar.gz tar xzvf redis-stable.tar.gz ``<br>
+``cd redis-stable``<br>
+``make``<br>
+``make test``<br>
+``redis-server``<br>
 import code.sql in your **MySql DB**
 Now is time to run it 🥳 In the **root directory**👇 <br>
-nodemon app.js
+``nodemon app.js``
 <br>
 I used these things to make this project. <br>
 Express JWT bcrypt knex mysql nodemailer redis
@@ -50,7 +50,7 @@ router.get('/friendlist', checkAuth, friendControllers.friendlist);
 ```
 
  <br>
-this endpoint Below, you want to run, so then you have to tell **Action** and **friend_id**, what could be Action  <br>
+this endpoint Below, you want to run, so then you have to tell **Action** and **friend_id** , what could be Action  <br>
 addfriend/{fId}  <br>
 reject/{fId} <br>
 block/{fId} 
@@ -59,3 +59,57 @@ block/{fId}
  ```javascript
  router.post('/:Action/:fId', checkAuth, friendControllers.Frirequest);
 ```
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.button {
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.button1 {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #4CAF50;
+}
+
+.button1:hover {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.button2 {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #008CBA;
+}
+
+.button2:hover {
+  background-color: #008CBA;
+  color: white;
+}
+
+</style>
+</head>
+<body>
+
+<h1>The button element - Styled with CSS</h1>
+
+<p>Use the :hover selector to change the style of the button when you move the mouse over it.</p>
+<p><strong>Tip:</strong> Use the transition-duration property to determine the speed of the "hover" effect:</p>
+
+<button class="button button1">Green</button>
+<button class="button button2">Blue</button>
+
+</body>
+</html>
