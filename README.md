@@ -1,4 +1,4 @@
-# Node.Js Social media
+# Node.Js Social media Back-end
 The task for Backend dev:
 
 Social Media Application :
