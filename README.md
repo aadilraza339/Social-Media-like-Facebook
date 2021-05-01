@@ -57,6 +57,6 @@ addfriend/{fId}  <br>
 reject/{fId} <br>
 block/{fId} 
 <br>
- ```javascript
- router.post('/:Action/:fId', checkAuth, friendControllers.Frirequest);
+```javascript
+router.post('/:Action/:fId', checkAuth, friendControllers.Frirequest);
 ```
