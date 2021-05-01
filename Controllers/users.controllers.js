@@ -4,7 +4,13 @@ const knex = require("../Models/registration");
 const jwt = require("jsonwebtoken");
 const post_knex = require("../Models/post")
 const nodemailer = require("nodemailer");
+const redis = require("redis");
+const redisPort = 6379
+const client = redis.createClient(redisPort);
 
+client.on("error", (err) => {
+    console.log(err);
+})
 const userRegister = (req, res, next) => {
 	knex.IsUser(req.body.email)
 		.then((user) => {
@@ -253,13 +259,35 @@ const deletePost = (req, res)  => {
 }
 
 const get_post = (req, res) => {
-	post_knex.get_post()
-	.then((allPost) => {
-		res.send(allPost)
-	})
-	.catch((err)=>{
-		res.status(400).json(err)
-	})
+	try {
+		client.get("allpost", async (err, all_post) => {
+			if (err) throw err;
+    
+            if (all_post) {
+                res.status(200).send({
+                    posts: JSON.parse(all_post),
+                    message: "data retrieved from the cache"
+                });
+			}  
+			else {
+				post_knex.get_post()
+				.then((allPost) => {
+					client.setex("allpost", 600, JSON.stringify(allPost));
+					res.status(200).send({
+						posts: allPost,
+						message: "cache miss"
+					});
+				})
+				.catch((err)=>{
+					res.status(400).json(err)
+				})
+			}
+		})
+			
+	  }
+	  catch (e) {
+		
+	  }	
 }
 let updateProfile = (req, res) => {
 	var activeUser = getUid(req)
