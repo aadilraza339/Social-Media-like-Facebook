@@ -19,13 +19,15 @@ Design and develop REST APIs using node.js for a mini social media app which inc
 ``git clone https://github.com/aadilraza339/Social-Media-like-Facebook.git``<br>
 ``cd Social-Media-like-Facebook``<br>
 ``npm intall``<br>
-<span>For caching I used redis, if you want to know about  </span><a href="https://livecodestream.dev/post/beginners-guide-to-redis-and-caching-with-nodejs/">click here</a><br>
-``mkdir redis && cd redis<br>``
+
+### <span>For caching I used redis, if you want to know about  </span><a href="https://livecodestream.dev/post/beginners-guide-to-redis-and-caching-with-nodejs/">click here</a><br>
+``mkdir redis && cd redis`` <br>
 ``curl -O http://download.redis.io/redis-stable.tar.gz tar xzvf redis-stable.tar.gz ``<br>
 ``cd redis-stable``<br>
 ``make``<br>
 ``make test``<br>
 ``redis-server``<br>
+
 import code.sql in your **MySql DB**
 Now is time to run it 🥳 In the **root directory**👇 <br>
 ``nodemon app.js``
