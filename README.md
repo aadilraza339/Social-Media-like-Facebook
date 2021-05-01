@@ -32,8 +32,8 @@ import code.sql in your **MySql DB**
 Now is time to run it 🥳 In the **root directory**👇 <br>
 ``nodemon app.js``
 <br>
-I used these things to make this project. <br>
-Express JWT bcrypt knex mysql nodemailer redis
+### I used these things to make this project. <br>
+``Express`` ``JWT`` ``bcrypt`` ``knex`` ``mysql`` ``nodemailer`` ``redis``
  <br>
 These are the endpoints Below you Can run them using postman, here is the link for download<a href="https://www.postman.com/downloads/">click here</a>
  <br>
@@ -52,7 +52,7 @@ router.get('/friendlist', checkAuth, friendControllers.friendlist);
 ```
 
  <br>
-this endpoint Below, you want to run, so then you have to tell **Action** and **friend_id** , what could be Action  <br>
+#### this endpoint Below, you want to run, so then you have to tell **Action** and **friend_id** , what could be Action  <br>
 addfriend/{fId}  <br>
 reject/{fId} <br>
 block/{fId} 
