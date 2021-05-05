@@ -11,7 +11,7 @@ let IsUser = (email)=>{
 let me = (username)=>{
     return knex.select('username','first_name','last_name', 'email', 'city','state','country', 'profile_picture_url', 'birth_date').from('users').where('username',username)
 }
-
+ 
 let enter_token = (token, email) => {
     return knex('users').update({"reset_token":token}).where('email',email)
 }
