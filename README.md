@@ -27,6 +27,7 @@ Design and develop REST APIs using node.js for a mini social media app which inc
 ``make``<br>
 ``make test``<br>
 ``redis-server``<br>
+``config your .env``
 
 import code.sql in your **MySql DB**
 Now is time to run it 🥳 In the **root directory**👇 <br>
