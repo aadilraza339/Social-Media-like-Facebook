@@ -75,8 +75,10 @@ const userLogin = (req, res, next) => {
 						{
 							expiresIn: "1d",
 						}
-          			);
-					res.cookie(token)
+					  );
+					
+					res.clearCookie('token');
+					res.cookie('token',token);
 					res.status(200).json({
 						message: "Auth successful",
 						userDetails: {
@@ -204,10 +206,8 @@ const resetP =  (req, res) =>{
 		})  
 };
 
-const getUid = (req) => {
-	var token = req.headers.cookie 
-	token = token.split('=')
-	token = (token[token.length-2]).slice(11,300)
+const getUid = (req,res) => {
+	var token = req.cookies.token
 	if (!token) return res.status(400).send("Access Denied!, no token entered");
 
 	try { 

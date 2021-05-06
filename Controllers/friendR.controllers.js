@@ -2,6 +2,7 @@ const knex = require("../Models/friend");
 const {getUid} = require('./users.controllers');
 
 const sendReq = (req, res, next) => {
+    console.log(req,'req');
     var fId = req.params.fId;
     knex.isExistsFid(fId)
     .then((isexistsfid) =>{
@@ -64,9 +65,9 @@ const Frirequest =async (req, res, next) => {
             });
         }
     })
-    .catch((err) => {
+    .catch(() => {
         res.status(500).json({
-            error: err,
+            error: 'Something Went Wrong ',
         });
     });
 }

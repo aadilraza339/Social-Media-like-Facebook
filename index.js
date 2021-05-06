@@ -1,10 +1,13 @@
 var express = require('express');
 const bodyParser = require('body-parser')
+let cookieParser = require('cookie-parser');
+
 require('dotenv').config()
 
 var usersRouter = require('./Routes/users.routes');
 var requestRouter = require('./Routes/friend.routers');
 var app = express();
+app.use(cookieParser());
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
@@ -19,7 +22,7 @@ app.use(function(err, req, res, next) {
   })
 });
 
-// error handler
+// // error handler
 app.use(function(err, req, res, next) {
   res.status(err.status || 500).json({
     message: "Error Message"
