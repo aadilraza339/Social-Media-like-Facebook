@@ -84,8 +84,7 @@ const userLogin = (req, res, next) => {
 						userDetails: {
 							userId: user[0].user_id,
 							email: user[0].email,
-						},
-						token: token,
+						}
 					});
 				}
 				else {
